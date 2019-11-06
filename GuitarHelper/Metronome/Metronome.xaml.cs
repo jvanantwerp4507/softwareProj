@@ -94,5 +94,10 @@ namespace GuitarHelper.Metronome
             bpm--;
             BPM.Text = bpm.ToString();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
     }
 }
