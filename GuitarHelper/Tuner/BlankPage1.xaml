@@ -14,6 +14,6 @@
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
     <TextBlock Text="Tuner Page" FontSize="45" ></TextBlock>
-        <Button Content=""></Button>
+        <Button Content="Return to menu" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="120" FontSize="55" Click="Button_Click"></Button>
     </Grid>
 </Page>
