@@ -31,5 +31,10 @@ namespace GuitarHelper
         {
             this.Frame.Navigate(typeof(Tuner.BlankPage1));
         }
+
+        private void Metronome_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Metronome.Metronome));
+        }
     }
 }

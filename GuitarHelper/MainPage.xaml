@@ -38,6 +38,6 @@
                 Content="Metronome"
                 FontSize="45" 
                 Margin="911,0,0,0"
-                Background="Red"/>
+                Background="Red" Click="Metronome_Click"/>
     </Grid>
 </Page>
