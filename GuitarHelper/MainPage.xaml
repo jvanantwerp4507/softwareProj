@@ -8,36 +8,54 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:Name="MainMenu">
+    <Grid x:Name="MainMenu" MinWidth="1500" MinHeight="1000">
         <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
 
 
-        <Grid Background="Aquamarine"
-              Grid.Row="0"/>
+        <Rectangle Fill="Aquamarine"
+                   Grid.Row="0"/>
         
-        <Grid Grid.Row="1"
-              Background="Black"/>
+        <Rectangle Fill="Aquamarine"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
         
+        <Rectangle Grid.Row="1"
+                   Fill="Black"/>
+
+        <Rectangle Grid.Row="1"
+                   Grid.Column="1"
+                   Fill="Black"/>
+
+
+
         <Button x:Name="Tuner"
                 Grid.Row="1"
+                Grid.Column="0"
                 Height="100"
                 Width="300"
-                Margin="255,0,0,0"
                 Content="Tuner"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
                 FontSize="45"
                 Background="Red" Click="Tuner_Click"
                 />
 
         <Button x:Name="Metronome"
                 Grid.Row="1"
+                Grid.Column="1"
                 Height="100"
                 Width="300"
                 Content="Metronome"
                 FontSize="45" 
-                Margin="911,0,0,0"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
                 Background="Red" Click="Metronome_Click"/>
     </Grid>
 </Page>
