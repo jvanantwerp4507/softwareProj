@@ -8,8 +8,12 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button x:Name="fuck"
-                Background="AntiqueWhite"/>
+    <Grid Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+    <TextBlock Text="Tuner Page" FontSize="45" ></TextBlock>
+        <Button Content=""></Button>
     </Grid>
 </Page>

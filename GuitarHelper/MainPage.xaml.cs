@@ -26,5 +26,10 @@ namespace GuitarHelper
         {
             this.InitializeComponent();
         }
+
+        private void Tuner_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Tuner.BlankPage1));
+        }
     }
 }

@@ -28,7 +28,8 @@
                 Margin="255,0,0,0"
                 Content="Tuner"
                 FontSize="45"
-                Background="Red"/>
+                Background="Red" Click="Tuner_Click"
+                />
 
         <Button x:Name="Metronome"
                 Grid.Row="1"
