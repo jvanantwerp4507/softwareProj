@@ -13,9 +13,14 @@
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-    <TextBlock Text="Tuner Page" FontSize="45" ></TextBlock>
-        <Button Content="Play Audio" FontSize="42" HorizontalAlignment="Center"
-                 VerticalAlignment="Center" Click="Button_Click_1"></Button>
+        <TextBlock Text="Tuner Page" FontSize="45" ></TextBlock>
+        <Image Source="/Tuner/guitar head.jpg" Margin="428,309,389,15" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Image.RenderTransform>
+                <CompositeTransform Rotation="-89.865"/>
+            </Image.RenderTransform>
+        </Image>
+        <Button Content="Play Audio" FontSize="42"
+                 VerticalAlignment="Top" Click="Button_Click_1" Margin="352,167,0,0" Grid.Row="1"/>
         <Button Content="Return to menu" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="120" FontSize="55" Click="Button_Click"></Button>
     </Grid>
 </Page>
