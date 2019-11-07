@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
 
 
-        <Rectangle Fill="#CC9E78"
+        <Rectangle Fill="#FFC596"
                    Grid.Row="0"/>
 
         <Rectangle Fill="#FFC596"
