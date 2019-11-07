@@ -36,6 +36,7 @@ namespace GuitarHelper.Tuner
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
             _ = Tuner.sound.playSoundAsync("bueller.wav");
+            
         }
 
 

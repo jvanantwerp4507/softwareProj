@@ -22,9 +22,11 @@ namespace GuitarHelper.Tuner
             Windows.Storage.StorageFile file = await folder.GetFileAsync(soundFile);
             var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
             mysong.SetSource(stream, file.ContentType);
+            mysong.IsLooping = false;
             mysong.Play();
         }
 
+      
       
     }
 }

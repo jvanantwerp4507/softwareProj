@@ -21,7 +21,7 @@
         <Rectangle Fill="Aquamarine"
                    Grid.Row="0"/>
 
-        <Rectangle Fill="Aquamarine"
+        <Rectangle Fill="Aquamarine"></Rectangle>
 
 
         <Rectangle Fill="#CC9E78"
@@ -65,12 +65,9 @@
                 FontSize="45" 
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
-<<<<<<< HEAD
                 Background="Red" Click="Metronome_Click"/>
-=======
-                Background="#1f0f08"
-                Foreground="White"
-                Click="Metronome_Click"/>
+
+        
 
         <TextBlock Text="Guitar Helper"
                    Height="110"
