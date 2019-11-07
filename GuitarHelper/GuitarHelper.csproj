@@ -129,6 +129,7 @@
     <Compile Include="Tuner\BlankPage1.xaml.cs">
       <DependentUpon>BlankPage1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tuner\sound.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -144,6 +145,7 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Tuner\bueller.wav" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
