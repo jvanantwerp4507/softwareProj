@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:Name="MainMenu">
+    <Grid MinHeight="1000" MinWidth="1500" x:Name="MainMenu">
         <Grid.RowDefinitions>
             <RowDefinition Height="80*"/>
             <RowDefinition Height="20*"/>
@@ -17,21 +17,30 @@
             <ColumnDefinition Width="50*"/>
             <ColumnDefinition Width="50*"/>
         </Grid.ColumnDefinitions>
-
-
-        <Rectangle Fill="#d9a881"
+<<<<<<< HEAD
+        <Rectangle Fill="Aquamarine"
                    Grid.Row="0"/>
 
-        <Rectangle Fill="#d9a881"
+        <Rectangle Fill="Aquamarine"
+=======
+
+
+        <Rectangle Fill="#CC9E78"
+                   Grid.Row="0"/>
+
+        <Rectangle Fill="#FFC596"
+>>>>>>> 0f08c69e77809761a0737d1dce6804bca795b379
                    Grid.Row="0"
                    Grid.Column="1"/>
-        
+
         <Rectangle Grid.Row="1"
-                   Fill="#573718"/>
+                   Fill="Black"
+                 />
 
         <Rectangle Grid.Row="1"
                    Grid.Column="1"
-                   Fill="#573718"/>
+                   Fill="Black"
+                 />
 
 
 
@@ -44,9 +53,8 @@
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 FontSize="45"
-                Background="#1f0f08"
-                Foreground="White"
                 Click="Tuner_Click"
+                Background="Red"
                 />
 
         <Button x:Name="Metronome"
@@ -58,15 +66,26 @@
                 FontSize="45" 
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
+<<<<<<< HEAD
+                Background="Red" Click="Metronome_Click"/>
+=======
                 Background="#1f0f08"
                 Foreground="White"
                 Click="Metronome_Click"/>
 
         <TextBlock Text="Guitar Helper"
-                   Height="100"
+                   Height="110"
                    Width="400"
                    FontSize="62"
                    Grid.ColumnSpan="2"
-                   VerticalAlignment="Top"/>
+                   VerticalAlignment="Top"
+                   TextAlignment="Center"
+                   />
+        <Image Height="400"
+               Width="500"
+               Grid.ColumnSpan="2"
+               VerticalAlignment="Center"
+               Source="C:\Users\Riley\Pictures\Capture.PNG"/>
+>>>>>>> 0f08c69e77809761a0737d1dce6804bca795b379
     </Grid>
 </Page>

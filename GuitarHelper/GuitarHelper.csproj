@@ -146,6 +146,7 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Tuner\bueller.wav" />
+    <Content Include="Tuner\guitar head.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -175,6 +176,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\naudio.1.9.0.nupkg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pics\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
