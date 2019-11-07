@@ -19,10 +19,10 @@
         </Grid.ColumnDefinitions>
 
 
-        <Rectangle Fill="#d9a881"
+        <Rectangle Fill="#CC9E78"
                    Grid.Row="0"/>
 
-        <Rectangle Fill="#d9a881"
+        <Rectangle Fill="#FFC596"
                    Grid.Row="0"
                    Grid.Column="1"/>
         
@@ -63,10 +63,17 @@
                 Click="Metronome_Click"/>
 
         <TextBlock Text="Guitar Helper"
-                   Height="100"
+                   Height="110"
                    Width="400"
                    FontSize="62"
                    Grid.ColumnSpan="2"
-                   VerticalAlignment="Top"/>
+                   VerticalAlignment="Top"
+                   TextAlignment="Center"
+                   />
+        <Image Height="400"
+               Width="500"
+               Grid.ColumnSpan="2"
+               VerticalAlignment="Center"
+               Source="C:\Users\Riley\Pictures\Capture.PNG"/>
     </Grid>
 </Page>
