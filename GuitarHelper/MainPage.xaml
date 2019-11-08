@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid MinHeight="1000" MinWidth="1500" x:Name="MainMenu">
+    <Grid x:Name="MainMenu">
         <Grid.RowDefinitions>
             <RowDefinition Height="80*"/>
             <RowDefinition Height="20*"/>

@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="GuitarHelper.musicLib.BlankPage1"
+    x:Class="GuitarHelper.musicLib.SheetMusic"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:GuitarHelper.musicLib"
@@ -22,7 +22,6 @@
                 Content="back"
                 FontSize="45" 
                 HorizontalAlignment="Left"
-                Background="Moccasin"
-                Click="Back_Click"/>
+                Background="Moccasin"/>
     </Grid>
 </Page>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GuitarHelper.musicLib;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -35,6 +36,11 @@ namespace GuitarHelper
         private void Metronome_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Metronome.Metronome));
+        }
+
+        private void library_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(musicLib.SheetMusic));
         }
     }
 }
