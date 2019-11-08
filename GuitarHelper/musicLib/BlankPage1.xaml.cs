@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.Media.Playback;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -16,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace GuitarHelper.Tuner
+namespace GuitarHelper.musicLib
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -26,20 +25,8 @@ namespace GuitarHelper.Tuner
         public BlankPage1()
         {
             this.InitializeComponent();
+
+            // on this page is the lib for all the music offered 
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
-        }
-
-        private async void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            _ = Tuner.sound.playSoundAsync("bueller.wav");
-            
-        }
-
-
-
     }
 }

@@ -5,6 +5,7 @@
     xmlns:local="using:GuitarHelper.Tuner"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -13,9 +14,75 @@
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-    <TextBlock Text="Tuner Page" FontSize="45" ></TextBlock>
-        <Button Content="Play Audio" FontSize="42" HorizontalAlignment="Center"
-                 VerticalAlignment="Center" Click="Button_Click_1"></Button>
+        <TextBlock Text="Tuner Page" FontSize="45" ></TextBlock>
+        <Image Source="/Tuner/guitar head.jpg" Margin="428,309,389,15" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Image.RenderTransform>
+                <CompositeTransform Rotation="-89.865"/>
+            </Image.RenderTransform>
+        </Image>
+        <Button x:Name="TunerE"
+            Content="E"
+                FontSize="34"
+                Windows10version1809:CornerRadius="90,90,90,90"
+                Height="110"
+                Width="110"
+                Margin="648,88,0,0"
+                VerticalAlignment="Top"/>
+        <Button x:Name="TunerA" Content="A"
+                FontSize="34"
+                Windows10version1809:CornerRadius="90,90,90,90"
+                Height="110"
+                Width="110"
+                Margin="648,313,0,0"
+                VerticalAlignment="Top"/>
+        <Button x:Name="TunerD" Content="D"
+                FontSize="34"
+                Windows10version1809:CornerRadius="90,90,90,90"
+                Height="110"
+                Width="110"
+                Margin="648,203,0,0"
+                VerticalAlignment="Top"/>
+        <Button x:Name="TunerB" Content="B"
+                FontSize="34"
+                Windows10version1809:CornerRadius="90,90,90,90"
+                Height="110"
+                Width="110"
+                Margin="1225,203,0,0"
+                VerticalAlignment="Top"/>
+        <Button x:Name="TunerG" Content="G"
+                FontSize="34"
+                Windows10version1809:CornerRadius="90,90,90,90"
+                Height="110"
+                Width="110"
+                Margin="1225,88,0,0"
+                VerticalAlignment="Top"/>
+        <Button x:Name="TunerEE" Content="E"
+                FontSize="34"
+                Windows10version1809:CornerRadius="90,90,90,90"
+                Height="110"
+                Width="110"
+                Margin="1225,318,0,0"
+                VerticalAlignment="Top"/>
+        <Button Content="Play Audio" 
+                FontSize="42"
+                VerticalAlignment="Top"
+                Click="Button_Click_1"
+                Margin="352,167,0,0" 
+                Grid.Row="1"/>
+        <Slider
+            x:Name="slider1"
+            Maximum="785"
+            Minimum="0"
+            Background="Black"
+            CanDrag="True"
+            BorderThickness="5"
+            CharacterSpacing="900"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TickFrequency="5"
+            TickPlacement="BottomRight"
+            Orientation="Horizontal" Margin="1520,10,0,0"
+            />
         <Button Content="Return to menu" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="120" FontSize="55" Click="Button_Click"></Button>
     </Grid>
 </Page>

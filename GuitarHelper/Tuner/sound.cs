@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NAudio.Wave;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,15 +14,19 @@ namespace GuitarHelper.Tuner
        public static  MediaPlayer a = new MediaPlayer();
        
 
-        public static async Task playSoundAsync()
+        public static async Task playSoundAsync(string soundFile)
         {
 
             MediaElement mysong = new MediaElement();
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Tuner");
-            Windows.Storage.StorageFile file = await folder.GetFileAsync("bueller.wav");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync(soundFile);
             var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
             mysong.SetSource(stream, file.ContentType);
+            mysong.IsLooping = false;
             mysong.Play();
         }
+
+      
+      
     }
 }
