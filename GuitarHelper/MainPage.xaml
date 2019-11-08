@@ -67,7 +67,7 @@
                 HorizontalAlignment="Center"
                 Background="Red" Click="Metronome_Click"/>
 
-        
+
 
         <TextBlock Text="Guitar Helper"
                    Height="110"
@@ -82,6 +82,18 @@
                Grid.ColumnSpan="2"
                VerticalAlignment="Center"
                Source="C:\Users\Riley\Pictures\Capture.PNG"/>
+
+
+        <Button x:Name="library"
+                Grid.ColumnSpan="2"
+                Height="100"
+                Width="300"
+                Content="library"
+                FontSize="45"
+                Background="Red" 
+                Click="library_Click" 
+                Margin="600,0,0,0"
+                Grid.Row="1"/>
 
     </Grid>
 </Page>
