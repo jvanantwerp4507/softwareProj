@@ -27,8 +27,12 @@ namespace GuitarHelper.musicLib
             this.InitializeComponent();
 
             // on this page is the lib for all the music offered 
+
         }
 
-      
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
     }
 }

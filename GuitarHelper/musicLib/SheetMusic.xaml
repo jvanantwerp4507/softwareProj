@@ -22,6 +22,6 @@
                 Content="back"
                 FontSize="45" 
                 HorizontalAlignment="Left"
-                Background="Moccasin"/>
+                Background="Moccasin" Click="back_Click"/>
     </Grid>
 </Page>
