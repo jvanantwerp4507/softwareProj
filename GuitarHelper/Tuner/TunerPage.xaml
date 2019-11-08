@@ -63,11 +63,21 @@
                 Width="110"
                 Margin="1225,318,0,0"
                 VerticalAlignment="Top"/>
-        <Button Content="Play Audio" 
+        <Button Content="Start Recording" 
                 FontSize="42"
                 VerticalAlignment="Top"
                 Click="Button_Click_1"
-                Margin="352,167,0,0" 
+                Margin="309,0,0,0" 
+                Grid.Row="1"/>
+        <Button Content="Stop Recording" 
+                FontSize="42"
+                VerticalAlignment="Top"
+                Click="OnStop"
+                Grid.Row="1"/>
+        <Button Content="Play Audio" 
+                FontSize="42"
+                Click="play_Audio_Click"
+                Margin="193,0,0,0" 
                 Grid.Row="1"/>
         <Slider
             x:Name="slider1"
@@ -81,7 +91,7 @@
             VerticalAlignment="Top"
             TickFrequency="5"
             TickPlacement="BottomRight"
-            Orientation="Horizontal" Margin="1520,10,0,0"
+            Orientation="Vertical" Margin="1520,10,0,0"
             />
         <Button Content="Return to menu" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="120" FontSize="55" Click="Button_Click"></Button>
     </Grid>
