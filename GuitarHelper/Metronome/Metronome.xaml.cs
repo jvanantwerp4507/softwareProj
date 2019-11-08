@@ -5,13 +5,19 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Core;
+using Windows.Media.MediaProperties;
+using Windows.Media.Playback;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using GuitarHelper.Classes;
+
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,10 +28,14 @@ namespace GuitarHelper.Metronome
     /// </summary>
     public sealed partial class Metronome : Page
     {
+        private MediaPlayer mediaPlayer = new MediaPlayer();
         public Metronome()
         {
             this.InitializeComponent();
+            
+            mediaPlayer.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Tick.mp3"));
             DispatcherTimerSetup();
+            BPM.Text = Classes.MetronomeHelper.bpm.ToString();
         }
 
         DispatcherTimer dispatcherTimer;
@@ -34,7 +44,6 @@ namespace GuitarHelper.Metronome
         DateTimeOffset stopTime;
         int timesTicked = 1;
         int timesToTick = 60 * 3;
-        int bpm = 60;
         bool right = true;
 
         public void DispatcherTimerSetup()
@@ -58,20 +67,39 @@ namespace GuitarHelper.Metronome
             timesTicked++;
             if ( right )
             {
-                Special.Angle += (bpm / 90f) * (span.Milliseconds/1000f) * 60f;
+                Special.Angle += (Classes.MetronomeHelper.bpm / 90f) * (span.Milliseconds/1000f) * 60f;
                 if ( Special.Angle >= 20 )
                 {
                     Special.Angle = 20;
                     right = false;
+                    try
+                    {
+                        mediaPlayer.Play();
+                    }
+                    catch ( Exception exception )
+                    {
+                        //Console.WriteLine(exception);
+                    }
                 }
             }
             else
             {
-                Special.Angle -= (bpm / 90f) * (span.Milliseconds/1000f) * 60f;
+                Special.Angle -= (Classes.MetronomeHelper.bpm / 90f) * (span.Milliseconds/1000f) * 60f;
                 if ( Special.Angle <= -20 )
                 {
                     Special.Angle = -20;
                     right = true;
+                    if ( mediaPlayer != null )
+                    {
+                        try
+                        {
+                            mediaPlayer.Play();
+                        }
+                        catch ( Exception exception )
+                        {
+                            //Console.WriteLine(exception);
+                        }
+                    }
                 }
             }
            /* if (timesTicked > timesToTick)
@@ -85,19 +113,24 @@ namespace GuitarHelper.Metronome
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            bpm++;
-            BPM.Text = bpm.ToString();
+            Click.playClick();
+            Classes.MetronomeHelper.bpm++;
+            BPM.Text = Classes.MetronomeHelper.bpm.ToString();
         }
 
         private void SubtractButton_Click(object sender, RoutedEventArgs e)
         {
-            bpm--;
-            BPM.Text = bpm.ToString();
+            Click.playClick();
+            Classes.MetronomeHelper.bpm--;
+            BPM.Text = Classes.MetronomeHelper.bpm.ToString();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            Click.playClick();
+            mediaPlayer.Pause();
+            this.Frame.Navigate(typeof(MainPage), null, new DrillInNavigationTransitionInfo());
+            mediaPlayer.Dispose();
         }
     }
 }
