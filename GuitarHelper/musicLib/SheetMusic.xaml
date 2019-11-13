@@ -24,16 +24,7 @@
                 HorizontalAlignment="Left"
                 Background="Moccasin" 
                 Click="back_Click"/>
-        <Button x:Name="addMusicToLibrary"
-                Grid.Row="0"
-                Grid.Column="1"
-                Height="100"
-                Width="500"
-                Content="add music to library"
-                FontSize="45" 
-                HorizontalAlignment="Right"
-                Background="Green"
-                Click="back_Click"/>
+       
 
         <Button Grid.Row="1"
                 HorizontalAlignment="Center"

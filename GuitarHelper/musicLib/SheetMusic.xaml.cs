@@ -34,8 +34,6 @@ namespace GuitarHelper.musicLib
         {
             this.InitializeComponent();
 
-            // on this page is the lib for all the music offered 
-
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
@@ -58,47 +56,43 @@ namespace GuitarHelper.musicLib
             if (file == null) return;
 
         }
-        private PdfDocument _myDocument { get; set; }
+        private PdfDocument myDocument { get; set; }
 
         private async Task OpenPDFAsync(StorageFile file)
         {
             if (file == null) throw new ArgumentNullException();
 
-            _myDocument = await PdfDocument.LoadFromFileAsync(file);
+            myDocument = await PdfDocument.LoadFromFileAsync(file);
 
             await OpenPDFAsync(file);
         }
         private async Task DisplayPage(uint pageIndex)
         {
-            if (_myDocument == null)
+            if (myDocument == null)
             {
                 throw new Exception("No document open.");
             }
 
-            if (pageIndex >= _myDocument.PageCount)
+            if (pageIndex >= myDocument.PageCount)
             {
-                throw new ArgumentOutOfRangeException($"Document has only {_myDocument.PageCount} pages.");
+                throw new ArgumentOutOfRangeException($"Document has only {myDocument.PageCount} pages.");
             }
 
-            // Get the page you want to render.
-            var page = _myDocument.GetPage(pageIndex);
 
-            // Create an image to render into.
+            var page = myDocument.GetPage(pageIndex);
+
+
             var image = new BitmapImage();
 
             using (var stream = new InMemoryRandomAccessStream())
             {
                 await page.RenderToStreamAsync(stream);
                 await image.SetSourceAsync(stream);
-
-                // Set the XAML Image control to display the rendered image.
-               
-
                 await OpenPDFAsync(file);
                 await DisplayPage(0);
             }
         }
 
-        
+
     }
 }
