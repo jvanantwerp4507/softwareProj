@@ -28,6 +28,8 @@ namespace GuitarHelper.musicLib
     /// </summary>
     public sealed partial class SheetMusic : Page
     {
+        private StorageFile file;
+
         public SheetMusic()
         {
             this.InitializeComponent();
@@ -90,8 +92,13 @@ namespace GuitarHelper.musicLib
                 await image.SetSourceAsync(stream);
 
                 // Set the XAML Image control to display the rendered image.
-                PdfImage.Source = image;
+               
+
+                await OpenPDFAsync(file);
+                await DisplayPage(0);
             }
         }
+
+        
     }
 }
