@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Media.Audio;
 using Windows.Media.Playback;
 using Windows.UI.Xaml.Controls;
 
@@ -24,8 +25,13 @@ namespace GuitarHelper.Tuner
             mysong.SetSource(stream, file.ContentType);
             mysong.IsLooping = false;
             mysong.Play();
+           
         }
 
+        public static async Task RecordAudio()
+        {
+            
+        }
       
       
     }

@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using GuitarHelper.Classes;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -26,15 +27,18 @@ namespace GuitarHelper
         public MainPage()
         {
             this.InitializeComponent();
+            Click.Initialize();
         }
 
         private void Tuner_Click(object sender, RoutedEventArgs e)
         {
+            Click.playClick();
             this.Frame.Navigate(typeof(Tuner.BlankPage1));
         }
 
         private void Metronome_Click(object sender, RoutedEventArgs e)
         {
+            Click.playClick();
             this.Frame.Navigate(typeof(Metronome.Metronome));
         }
 
