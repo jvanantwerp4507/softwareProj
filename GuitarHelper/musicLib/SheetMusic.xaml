@@ -24,14 +24,14 @@
                 HorizontalAlignment="Left"
                 Background="Moccasin" 
                 Click="back_Click"/>
-       
+
 
         <Button Grid.Row="1"
                 HorizontalAlignment="Center"
                 Click="ButtonClickOpenPDF"
                 Height="132"
                 Width="215"
-                VerticalAlignment="Top"
+                VerticalAlignment="Top" Margin="0,334,0,0"
                 >Open</Button>
 
     </Grid>
