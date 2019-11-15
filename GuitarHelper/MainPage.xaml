@@ -22,7 +22,7 @@
 
         <Rectangle Fill="#FFC596"
                    Grid.Row="0" Grid.Column="2"/>
-        
+
         <Rectangle Fill="#FFC596"
                    Grid.Row="0" Grid.Column="0"/>
 
@@ -39,7 +39,7 @@
                    Grid.Column="1"
                    Fill="#604A38"
                  />
-        
+
         <Rectangle Grid.Row="1"
                    Grid.Column="2"
                    Fill="#604A38"
@@ -82,7 +82,7 @@
                    VerticalAlignment="Top"
                    TextAlignment="Center"
                    />
-        
+
         <Image Height="400"
                Width="500"
                Grid.ColumnSpan="2"
@@ -102,5 +102,11 @@
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"/>
 
+        <Image Source="pics/guitar.png"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Grid.ColumnSpan="3"
+               Height="600"
+               Width="800"/>
     </Grid>
 </Page>
