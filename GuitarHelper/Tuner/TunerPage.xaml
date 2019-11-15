@@ -17,7 +17,7 @@
         <TextBlock Text="Tuner Page" FontSize="45" ></TextBlock>
         <Image Source="/Tuner/guitar head.jpg" Margin="428,309,389,15" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
             <Image.RenderTransform>
-                <CompositeTransform Rotation="-89.865"/>
+                <CompositeTransform Rotation="-90"/>
             </Image.RenderTransform>
         </Image>
         <Button x:Name="TunerE"
