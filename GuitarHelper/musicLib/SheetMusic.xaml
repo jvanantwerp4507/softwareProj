@@ -9,6 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+
+
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="9*"/>
@@ -31,7 +33,8 @@
                 Click="ButtonClickOpenPDF"
                 Height="132"
                 Width="215"
-                VerticalAlignment="Top" Margin="0,334,0,0"
+                VerticalAlignment="Top"
+                Margin="0,334,0,0"
                 >Open</Button>
 
     </Grid>

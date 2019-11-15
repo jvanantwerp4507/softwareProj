@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -28,7 +29,12 @@ namespace GuitarHelper.musicLib
     /// </summary>
     public sealed partial class SheetMusic : Page
     {
-       /* private StorageFile file;
+
+
+
+
+
+        private StorageFile file;
 
         public SheetMusic()
         {
@@ -91,8 +97,12 @@ namespace GuitarHelper.musicLib
                 await OpenPDFAsync(file);
                 await DisplayPage(0);
             }
-        }*/
+        }
+
+
+
 
 
     }
 }
+

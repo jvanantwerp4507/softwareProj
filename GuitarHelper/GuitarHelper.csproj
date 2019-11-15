@@ -130,6 +130,7 @@
     <Compile Include="musicLib\SheetMusic.xaml.cs">
       <DependentUpon>SheetMusic.xaml</DependentUpon>
     </Compile>
+    <Compile Include="musicLib\stream.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tuner\Recorder.cs" />
     <Compile Include="Tuner\SavingWaveProvider.cs" />
