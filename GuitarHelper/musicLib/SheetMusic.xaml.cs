@@ -24,31 +24,27 @@ using Windows.UI.Xaml.Navigation;
 
 namespace GuitarHelper.musicLib
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+
     public sealed partial class SheetMusic : Page
     {
 
 
-
-
-
-        private StorageFile file;
-
         public SheetMusic()
         {
             this.InitializeComponent();
-
         }
 
-        private void back_Click(object sender, RoutedEventArgs e)
+        private PdfDocument _myDocument { get; set; }
+
+        private async Task OpenPDFAsync(StorageFile file)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            if (file == null) throw new ArgumentNullException();
 
+            _myDocument = await PdfDocument.LoadFromFileAsync(file);
         }
 
-        private async void ButtonClickOpenPDF(object sender, RoutedEventArgs e)
+
+        private async void Button_Click_Open_PDF(object sender, RoutedEventArgs e)
         {
             var picker = new FileOpenPicker
             {
@@ -61,48 +57,39 @@ namespace GuitarHelper.musicLib
 
             if (file == null) return;
 
-        }
-        private PdfDocument myDocument { get; set; }
-
-        private async Task OpenPDFAsync(StorageFile file)
-        {
-            if (file == null) throw new ArgumentNullException();
-
-            myDocument = await PdfDocument.LoadFromFileAsync(file);
-
             await OpenPDFAsync(file);
+            await OpenPDFAsync(file);
+            await DisplayPage(0);
         }
         private async Task DisplayPage(uint pageIndex)
         {
-            if (myDocument == null)
+            if (_myDocument == null)
             {
                 throw new Exception("No document open.");
             }
 
-            if (pageIndex >= myDocument.PageCount)
+            if (pageIndex >= _myDocument.PageCount)
             {
-                throw new ArgumentOutOfRangeException($"Document has only {myDocument.PageCount} pages.");
+                throw new ArgumentOutOfRangeException($"Document has only {_myDocument.PageCount} pages.");
             }
 
+            // Get the page you want to render.
+            var page = _myDocument.GetPage(pageIndex);
 
-            var page = myDocument.GetPage(pageIndex);
-
-
+            // Create an image to render into.
             var image = new BitmapImage();
 
             using (var stream = new InMemoryRandomAccessStream())
             {
                 await page.RenderToStreamAsync(stream);
                 await image.SetSourceAsync(stream);
-                await OpenPDFAsync(file);
-                await DisplayPage(0);
+
+                // Set the XAML Image control to display the rendered image.
+                PdfImage.Source = image;
             }
         }
-
-
-
-
-
     }
+
 }
+
 

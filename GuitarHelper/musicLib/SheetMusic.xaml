@@ -9,32 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
-
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="9*"/>
-
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button x:Name="back"
-                Grid.Row="0"
-                Grid.Column="1"
-                Height="100"
-                Width="300"
-                Content="back"
-                FontSize="45" 
-                HorizontalAlignment="Left"
-                Background="Moccasin" 
-                Click="back_Click"/>
-
-
+        <Image Name="PdfImage"
+               Grid.Row="0"
+               Margin="10"></Image>
+        <Button Grid.Row="1" 
+                Margin="10,0,0,0" >Open</Button>
         <Button Grid.Row="1"
-                Click="ButtonClickOpenPDF"
-                Height="132"
-                Width="215"
-                VerticalAlignment="Top"
-                Margin="0,268,0,0" HorizontalAlignment="Center"
-                >Open</Button>
-
+            Margin="10,0,0,0" 
+            Click="Button_Click_Open_PDF">Open</Button>
     </Grid>
 </Page>

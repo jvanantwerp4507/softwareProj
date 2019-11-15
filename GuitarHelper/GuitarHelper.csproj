@@ -189,6 +189,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="musicLib\sheet music image\ill-fly-away-tab-by-alan-jackson.pdf" />
     <None Include="Resources\naudio.1.9.0.nupkg" />
   </ItemGroup>
   <ItemGroup>
