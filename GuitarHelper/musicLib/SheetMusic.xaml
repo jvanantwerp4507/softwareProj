@@ -13,13 +13,45 @@
             <RowDefinition/>
             <RowDefinition Height="108.8"></RowDefinition>
         </Grid.RowDefinitions>
-        <Image Name="PdfImage"
-               Grid.Row="0"
-               Margin="10,10,10,10"></Image>
+        
         <Button Grid.Row="1"
                 Margin="10,0,0,0" 
                 Click="Button_Click_Open_PDF"
                 Height="89"
                 Width="140">Open</Button>
+
+        <Button x:Name="back"
+                Grid.Row="1"
+                Height="100"
+                Width="300"
+                Content="back"
+                HorizontalAlignment="Right"
+                FontSize="45"
+                Background="NavajoWhite" 
+                Click="back_Click_1"
+                />
+
+        <ScrollViewer x:Name = "scrollViewer_Image"
+                          HorizontalScrollBarVisibility= "Disabled" 
+                          VerticalScrollBarVisibility= "Hidden"     >
+
+            <Image x:Name = "PdfImage"
+                       VerticalAlignment = "Stretch"
+                       HorizontalAlignment= "Stretch"
+                       PointerWheelChanged = "ctlImage_PointerWheelChanged"   
+                       ManipulationMode = "Scale" >
+
+                <Image.RenderTransform>
+
+                    <CompositeTransform x:Name = "image_Transform" >
+                    </CompositeTransform>
+
+                </Image.RenderTransform>
+
+            </Image>
+
+        </ScrollViewer>
+
+
     </Grid>
 </Page>

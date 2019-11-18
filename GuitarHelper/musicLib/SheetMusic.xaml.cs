@@ -73,10 +73,10 @@ namespace GuitarHelper.musicLib
                 throw new ArgumentOutOfRangeException($"Document has only {_myDocument.PageCount} pages.");
             }
 
-            // Get the page you want to render.
+
             var page = _myDocument.GetPage(pageIndex);
 
-            // Create an image to render into.
+
             var image = new BitmapImage();
 
             using (var stream = new InMemoryRandomAccessStream())
@@ -84,12 +84,32 @@ namespace GuitarHelper.musicLib
                 await page.RenderToStreamAsync(stream);
                 await image.SetSourceAsync(stream);
 
-                // Set the XAML Image control to display the rendered image.
+
                 PdfImage.Source = image;
             }
         }
+        private void back_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void ctlImage_PointerWheelChanged(object sender, PointerRoutedEventArgs e)
+
+        {
+
+            double dblDelta_Scroll = -1 * e.GetCurrentPoint(PdfImage).Properties.MouseWheelDelta;
+            dblDelta_Scroll = (dblDelta_Scroll > 0) ? 0.8 : 0.8;
+            double new_ScaleX = this.image_Transform.ScaleX * dblDelta_Scroll;
+
+            double new_ScaleY = this.image_Transform.ScaleY * dblDelta_Scroll;
+
+            this.image_Transform.ScaleX = new_ScaleX;
+
+            this.image_Transform.ScaleY = new_ScaleY;
+
+        }
+
+
     }
-
 }
-
 
