@@ -38,7 +38,8 @@
             <Image x:Name = "PdfImage"
                        VerticalAlignment = "Stretch"
                        HorizontalAlignment= "Stretch"
-                       PointerWheelChanged = "ctlImage_PointerWheelChanged"   
+                       PointerWheelChanged = "ctlImage_PointerWheelChanged"
+                       
                        ManipulationMode = "Scale" >
 
                 <Image.RenderTransform>
