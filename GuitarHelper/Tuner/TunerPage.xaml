@@ -9,7 +9,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="Gray">
+    <Grid Background="#FFC596">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
@@ -27,58 +27,76 @@
                 Height="110"
                 Width="110"
                 Margin="648,88,0,0"
-                VerticalAlignment="Top"/>
+                VerticalAlignment="Top"
+                Background="#604A38"
+                Foreground="White"/>
         <Button x:Name="TunerA" Content="A"
                 FontSize="34"
                 Windows10version1809:CornerRadius="90,90,90,90"
                 Height="110"
                 Width="110"
                 Margin="648,313,0,0"
-                VerticalAlignment="Top"/>
+                VerticalAlignment="Top"
+                Background="#604A38"
+                Foreground="White"/>
         <Button x:Name="TunerD" Content="D"
                 FontSize="34"
                 Windows10version1809:CornerRadius="90,90,90,90"
                 Height="110"
                 Width="110"
                 Margin="648,203,0,0"
-                VerticalAlignment="Top"/>
+                VerticalAlignment="Top"
+                Background="#604A38"
+                Foreground="White"/>
         <Button x:Name="TunerB" Content="B"
                 FontSize="34"
                 Windows10version1809:CornerRadius="90,90,90,90"
                 Height="110"
                 Width="110"
                 Margin="1225,203,0,0"
-                VerticalAlignment="Top"/>
+                VerticalAlignment="Top"
+                Background="#604A38"
+                Foreground="White"/>
         <Button x:Name="TunerG" Content="G"
                 FontSize="34"
                 Windows10version1809:CornerRadius="90,90,90,90"
                 Height="110"
                 Width="110"
                 Margin="1225,88,0,0"
-                VerticalAlignment="Top"/>
-        <Button x:Name="TunerEE" Content="E"
+                VerticalAlignment="Top"
+                Background="#604A38"
+                Foreground="White"/>
+        <Button x:Name="TunerF" Content="F"
                 FontSize="34"
                 Windows10version1809:CornerRadius="90,90,90,90"
                 Height="110"
                 Width="110"
                 Margin="1225,318,0,0"
-                VerticalAlignment="Top"/>
+                VerticalAlignment="Top"
+                Background="#604A38"
+                Foreground="White"/>
         <Button Content="Start Recording" 
                 FontSize="42"
                 VerticalAlignment="Top"
                 Click="Button_Click_1"
                 Margin="309,0,0,0" 
-                Grid.Row="1"/>
+                Grid.Row="1"
+                Background="#604A38"
+                Foreground="White"/>
         <Button Content="Stop Recording" 
                 FontSize="42"
                 VerticalAlignment="Top"
                 Click="OnStop"
-                Grid.Row="1"/>
+                Grid.Row="1"
+                Background="#604A38"
+                Foreground="White"/>
         <Button Content="Play Audio" 
                 FontSize="42"
                 Click="play_Audio_Click"
                 Margin="193,0,0,0" 
-                Grid.Row="1"/>
+                Grid.Row="1"
+                Background="#604A38"
+                Foreground="White"/>
         <Slider
             x:Name="slider1"
             Maximum="785"
@@ -93,6 +111,23 @@
             TickPlacement="BottomRight"
             Orientation="Vertical" Margin="1520,10,0,0"
             />
-        <Button Content="Return to menu" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="120" FontSize="55" Click="Button_Click"></Button>
+        <Button Content="Return to menu"
+                Grid.Row="2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Height="120"
+                FontSize="55"
+                Click="Button_Click"
+                Background="#604A38"
+                Foreground="White"></Button>
+        <Button x:Name="TunerC" Content="C"
+            FontSize="34"
+            CornerRadius="90,90,90,90"
+            Height="110"
+            Width="110"
+            Margin="1225,445,0,0"
+            VerticalAlignment="Top"
+            Background="#604A38"
+            Foreground="White"/>
     </Grid>
 </Page>
