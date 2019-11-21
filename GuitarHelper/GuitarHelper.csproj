@@ -189,10 +189,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="musicLib\sheet music image\I%27LL fly away .pdf" />
     <None Include="Resources\naudio.1.9.0.nupkg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="musicLib\sheet music image\" />
     <Folder Include="pics\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

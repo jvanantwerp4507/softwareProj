@@ -27,11 +27,17 @@ namespace GuitarHelper.musicLib
 
     public sealed partial class SheetMusic : Page
     {
+        private float min = 0.5f;
+        private float max = 2.0f;
+        private float currentScale = 0.5f;
 
 
         public SheetMusic()
         {
             this.InitializeComponent();
+
+            this.image_Transform.ScaleX = currentScale; //new_ScaleX;
+            this.image_Transform.ScaleY = currentScale; // new_ScaleY;
         }
 
         private PdfDocument _myDocument { get; set; }
@@ -97,19 +103,25 @@ namespace GuitarHelper.musicLib
 
         {
 
-            double dblDelta_Scroll = -1 * e.GetCurrentPoint(PdfImage).Properties.MouseWheelDelta;
-            dblDelta_Scroll = (dblDelta_Scroll > 0) ? 0.8 : 0.4;
-            double new_ScaleX = this.image_Transform.ScaleX * dblDelta_Scroll;
 
-            double new_ScaleY = this.image_Transform.ScaleY * dblDelta_Scroll;
 
-            this.image_Transform.ScaleX = new_ScaleX;
+            this.image_Transform.ScaleX = currentScale;
 
-            this.image_Transform.ScaleY = new_ScaleY;
+            this.image_Transform.ScaleY = currentScale;
 
         }
 
+        private void slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
 
+
+            currentScale = ((float)e.NewValue / 100) * (max - min) + min;
+
+            this.image_Transform.ScaleX = currentScale;
+
+            this.image_Transform.ScaleY = currentScale;
+
+        }
     }
 }
 

@@ -32,14 +32,13 @@
                 />
 
         <ScrollViewer x:Name = "scrollViewer_Image"
-                          HorizontalScrollBarVisibility= "Disabled" 
+                          HorizontalScrollBarVisibility= "Visible" 
                           VerticalScrollBarVisibility= "Hidden"     >
 
             <Image x:Name = "PdfImage"
                        VerticalAlignment = "Stretch"
                        HorizontalAlignment= "Stretch"
                        PointerWheelChanged = "ctlImage_PointerWheelChanged"
-                       
                        ManipulationMode = "Scale" >
 
                 <Image.RenderTransform>
@@ -52,6 +51,13 @@
             </Image>
 
         </ScrollViewer>
+
+        <Slider
+            x:Name = "slider"
+            MaxWidth="300"
+            Grid.Row="1"
+            ValueChanged="slider_ValueChanged">
+        </Slider>
 
 
     </Grid>
