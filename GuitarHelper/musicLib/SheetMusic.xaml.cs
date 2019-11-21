@@ -98,7 +98,7 @@ namespace GuitarHelper.musicLib
         {
 
             double dblDelta_Scroll = -1 * e.GetCurrentPoint(PdfImage).Properties.MouseWheelDelta;
-            dblDelta_Scroll = (dblDelta_Scroll > 0) ? 0.8 : 0.8;
+            dblDelta_Scroll = (dblDelta_Scroll > 0) ? 0.8 : 0.4;
             double new_ScaleX = this.image_Transform.ScaleX * dblDelta_Scroll;
 
             double new_ScaleY = this.image_Transform.ScaleY * dblDelta_Scroll;
