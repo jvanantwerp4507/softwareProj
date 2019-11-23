@@ -14,7 +14,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -34,15 +34,21 @@
             <DropDownButton.Flyout>
 
                 <MenuFlyout x:Name="Flyout" Placement="LeftEdgeAlignedTop">
-                   
+
                 </MenuFlyout>
 
             </DropDownButton.Flyout>
 
         </DropDownButton>
+        <ScrollViewer Grid.Row="2" Margin="5" Grid.Column="2" BorderBrush="Black"  BackgroundSizing="OuterBorderEdge" BorderThickness="6" CornerRadius="30" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto">
+            
+        <StackPanel Grid.Row="2" Grid.Column="2"  x:Name="multipleChords" ></StackPanel>
+        </ScrollViewer>
+        <TextBox x:Name="chordSearch" Grid.Column="2" Height="58" Width="150" PlaceholderText="chord" FontSize="30" TextAlignment="Center"></TextBox>
+        <Button Content="Search" Grid.Column="2" FontSize="48" HorizontalAlignment="Right" x:Name="search" Tapped="search_Tapped"></Button>
         <Button Content="Back" Foreground="White" FontSize="34" Background="Black" Width="125" Height="57" HorizontalAlignment="Left" CornerRadius="22" VerticalAlignment="Top"></Button>
-        <Image Grid.Row="2" Grid.Column="1" ></Image>
+        <Image Grid.Row="2" Grid.Column="1" x:Name="chordChart" Stretch="Uniform"  ></Image>
         <Button x:Name="PlayAudio" Content="Play Chord Audio" Grid.Row="3" Grid.Column="1"  CornerRadius="22" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="150" Width="300" FontSize="34"></Button>
- 
+
     </Grid>
 </Page>
