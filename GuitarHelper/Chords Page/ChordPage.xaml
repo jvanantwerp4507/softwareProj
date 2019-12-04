@@ -22,7 +22,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <DropDownButton Grid.Column="1"
-            x:Name="NewGame"
+            x:Name="KeysAndChords"
                         Height="100"
                         Width="375"
                         Grid.Row="0"
@@ -45,10 +45,10 @@
         </ScrollViewer>
         <TextBox x:Name="chordSearch" Grid.Column="2" Height="58" Width="150" PlaceholderText="chord" FontSize="30" TextAlignment="Center"></TextBox>
         <Button Content="Search" Grid.Column="2" FontSize="48" HorizontalAlignment="Right" x:Name="search" Tapped="search_Tapped"></Button>
-        <Button Content="Back" Foreground="White" FontSize="34" Background="Black" Width="125" Height="57" HorizontalAlignment="Left" CornerRadius="22" VerticalAlignment="Top"></Button>
+        <Button Content="Back" Foreground="White" FontSize="34" Background="Black" Width="125" Height="57" HorizontalAlignment="Left" CornerRadius="22" VerticalAlignment="Top" Click="Button_Click"></Button>
         <Image Grid.Row="2" Grid.Column="1" ></Image>
         <Image Grid.Row="2" Grid.Column="1" x:Name="chordChart" Stretch="Uniform"  ></Image>
-        <Button x:Name="PlayAudio" Content="Play Chord Audio" Grid.Row="3" Grid.Column="1"  CornerRadius="22" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="150" Width="300" FontSize="34"></Button>
+        <!--<Button x:Name="PlayAudio" Content="Play Chord Audio" Grid.Row="3" Grid.Column="1"  CornerRadius="22" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="150" Width="300" FontSize="34"></Button>-->
 
 
     </Grid>
