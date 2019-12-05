@@ -144,7 +144,10 @@
                     HorizontalAlignment="Stretch"
                     Height="70"
                     FontSize="37"
-                    Content="Standard - E,A,D,G,B,E" Click="StandardButton_Click"
+                    Content="Standard - E,A,D,G,B,E"
+                    Click="StandardButton_Click"
+                    Background="#604A38"
+                    Foreground="White"
                     />
             <Button x:Name="DropDButton"
                     HorizontalAlignment="Stretch"
@@ -152,6 +155,8 @@
                     FontSize="37"
                     Content="Drop D - D,A,D,G,B,E"
                     Click="DropDButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="DropCSharpButton"
                     HorizontalAlignment="Stretch"
@@ -159,6 +164,8 @@
                     FontSize="37"
                     Content="Drop C# - C#,A,D,G,B,E"
                     Click="DropCSharpButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="DropCButton"
                     HorizontalAlignment="Stretch"
@@ -166,6 +173,8 @@
                     FontSize="37"
                     Content="Drop C - C,G,C,F,A,D"
                     Click="DropCButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="DropBButton"
                     HorizontalAlignment="Stretch"
@@ -173,6 +182,8 @@
                     FontSize="37"
                     Content="Drop B - B,G♭,B,E,A♭,D♭"
                     Click="DropBButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="DropAButton"
                     HorizontalAlignment="Stretch"
@@ -180,6 +191,8 @@
                     FontSize="37"
                     Content="Drop A - A,E,A,D,G♭,B"
                     Click="DropAButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="DADGADButton"
                     HorizontalAlignment="Stretch"
@@ -187,6 +200,8 @@
                     FontSize="37"
                     Content="DADGAD - D,A,D,G,A,D"
                     Click="DADGADButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="HalfStepDownButton"
                     HorizontalAlignment="Stretch"
@@ -194,6 +209,8 @@
                     FontSize="37"
                     Content="Half Step Down - E♭,A♭,D♭,G♭,B♭,E♭"
                     Click="HalfStepDownButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="FullStepDownButton"
                     HorizontalAlignment="Stretch"
@@ -201,6 +218,8 @@
                     FontSize="37"
                     Content="Full Step Down - D,G,C,F,A,D"
                     Click="FullStepDownButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="HalfStepUpButton"
                     HorizontalAlignment="Stretch"
@@ -208,6 +227,8 @@
                     FontSize="37"
                     Content="Half Step Up - F,A#,D#,G#,C,F"
                     Click="HalfStepUpButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="OpenCButton"
                     HorizontalAlignment="Stretch"
@@ -215,6 +236,8 @@
                     FontSize="37"
                     Content="Open C - C,G,C,G,C,E"
                     Click="OpenCButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="OpenDButton"
                     HorizontalAlignment="Stretch"
@@ -222,6 +245,8 @@
                     FontSize="37"
                     Content="Open D - D,A,D,F#,A,D"
                     Click="OpenDButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="OpenEButton"
                     HorizontalAlignment="Stretch"
@@ -229,6 +254,8 @@
                     FontSize="37"
                     Content="Open E - E,B,E,G#,B,E"
                     Click="OpenEButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="OpenFButton"
                     HorizontalAlignment="Stretch"
@@ -236,6 +263,8 @@
                     FontSize="37"
                     Content="Open F - F,A,C,F,C,F"
                     Click="OpenFButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="OpenGButton"
                     HorizontalAlignment="Stretch"
@@ -243,6 +272,8 @@
                     FontSize="37"
                     Content="Open G - D,G,D,G,B,D"
                     Click="OpenGButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
             <Button x:Name="OpenAButton"
                     HorizontalAlignment="Stretch"
@@ -250,6 +281,8 @@
                     FontSize="37"
                     Content="Open A - E,A,E,A,C#,E"
                     Click="OpenAButton_OnClick"
+                    Background="#604A38"
+                    Foreground="White"
             />
         </ListBox>
     </Grid>

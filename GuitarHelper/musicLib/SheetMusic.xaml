@@ -8,13 +8,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="#FFC596">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="108.8"></RowDefinition>
         </Grid.RowDefinitions>
-        
-        <Button Grid.Row="1"
+
+        <Button Background="#9F7B5E"
+                Grid.Row="1"
                 Margin="10,0,0,0" 
                 Click="Button_Click_Open_PDF"
                 Height="89"
@@ -27,7 +28,7 @@
                 Content="back"
                 HorizontalAlignment="Right"
                 FontSize="45"
-                Background="NavajoWhite" 
+                Background="#9F7B5E" 
                 Click="back_Click_1"
                 />
 

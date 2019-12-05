@@ -92,5 +92,10 @@ namespace GuitarHelper
             var toast = new ToastNotification(content.GetXml());
             ToastNotificationManager.CreateToastNotifier().Show(toast);
         }
+
+        private void chordpage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Chords_Page.BlankPage1));
+        }
     }
 }
