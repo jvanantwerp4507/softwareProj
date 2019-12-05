@@ -119,6 +119,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+
+    <Compile Include="Chords Page\ChordPage.xaml.cs">
+      <DependentUpon>ChordPage.xaml</DependentUpon>
+
+ 
+
+    </Compile>
     <Compile Include="Classes\Click.cs" />
     <Compile Include="Classes\MetronomeHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -146,10 +153,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Click.mp3" />
+    <Content Include="Assets\SplashScreen.scale-200.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\Tick.mp3" />
+    <Content Include="Assets\youGotmail.mp3" />
+    <Content Include="pics\guitar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\o.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
@@ -157,12 +171,62 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Tuner\bueller.wav" />
     <Content Include="Tuner\guitar head.jpg" />
+    <Content Include="Tuner\GuitarSounds\BottomLeft\A.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomLeft\B.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomLeft\C.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomLeft\CSharp.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomLeft\D.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomLeft\E.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomLeft\EFlat.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomLeft\F.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomRight\B.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomRight\D.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomRight\DFlat.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomRight\E.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomRight\EFlat.mp3" />
+    <Content Include="Tuner\GuitarSounds\BottomRight\F.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleLeft\A.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleLeft\AFlat.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleLeft\ASharp.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleLeft\B.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleLeft\E.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleLeft\G.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleLeft\GFlat.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleRight\A.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleRight\AFlat.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleRight\B.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleRight\BFlat.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleRight\C.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleRight\CSharp.mp3" />
+    <Content Include="Tuner\GuitarSounds\MiddleRight\GFlat.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopLeft\A.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopLeft\B.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopLeft\C.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopLeft\D.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopLeft\DFlat.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopLeft\DSharp.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopLeft\E.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopRight\A.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopRight\D.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopRight\E.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopRight\F.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopRight\FSharp.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopRight\G.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopRight\GFlat.mp3" />
+    <Content Include="Tuner\GuitarSounds\TopRight\GSharp.mp3" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+
+    <Page Include="Chords Page\ChordPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+
+   
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -184,8 +248,14 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.9</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>6.0.0</Version>
+    </PackageReference>
     <PackageReference Include="NAudio">
       <Version>1.9.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +264,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="pics\" />
+    <Folder Include="musicLib\sheet music image\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

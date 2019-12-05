@@ -9,76 +9,109 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="Gray">
+    <Grid x:Name="mainGrid"
+        Background="#FFC596">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
         <TextBlock Text="Tuner Page" FontSize="45" ></TextBlock>
-        <Image Source="/Tuner/guitar head.jpg" Margin="428,309,389,15" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+        <Image Source="/Tuner/guitar head.jpg" Margin="-190,-100,-190,190" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Grid.Column="1" Grid.RowSpan="2">
             <Image.RenderTransform>
-                <CompositeTransform Rotation="-89.865"/>
+                <CompositeTransform Rotation="-90"/>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="TunerE"
+        <Button x:Name="Tuner1"
             Content="E"
                 FontSize="34"
                 Windows10version1809:CornerRadius="90,90,90,90"
                 Height="110"
                 Width="110"
-                Margin="648,88,0,0"
-                VerticalAlignment="Top"/>
-        <Button x:Name="TunerA" Content="A"
+                Margin="700,88,0,0"
+                VerticalAlignment="Top"
+                Background="#604A38"
+                Foreground="White"
+                Click="Tuner1_OnClick"/>
+        <Button x:Name="Tuner3" Content="D"
                 FontSize="34"
                 Windows10version1809:CornerRadius="90,90,90,90"
                 Height="110"
                 Width="110"
-                Margin="648,313,0,0"
-                VerticalAlignment="Top"/>
-        <Button x:Name="TunerD" Content="D"
+                Margin="700,313,0,0"
+                VerticalAlignment="Top"
+                Background="#604A38"
+                Foreground="White"
+                Click="Tuner3_OnClick"/>
+        <Button x:Name="Tuner2" Content="A"
                 FontSize="34"
                 Windows10version1809:CornerRadius="90,90,90,90"
                 Height="110"
                 Width="110"
-                Margin="648,203,0,0"
-                VerticalAlignment="Top"/>
-        <Button x:Name="TunerB" Content="B"
+                Margin="700,203,0,0"
+                VerticalAlignment="Top"
+                Background="#604A38"
+                Foreground="White"
+                Click="Tuner2_OnClick"/>
+        <Button x:Name="Tuner5" Content="B"
                 FontSize="34"
                 Windows10version1809:CornerRadius="90,90,90,90"
                 Height="110"
                 Width="110"
-                Margin="1225,203,0,0"
-                VerticalAlignment="Top"/>
-        <Button x:Name="TunerG" Content="G"
+                Margin="0,203,0,0"
+                VerticalAlignment="Top"
+                Background="#604A38"
+                Foreground="White"
+                Click="Tuner5_OnClick"
+                Grid.Column="2"/>
+        <Button x:Name="Tuner4" Content="G"
                 FontSize="34"
                 Windows10version1809:CornerRadius="90,90,90,90"
                 Height="110"
                 Width="110"
-                Margin="1225,88,0,0"
-                VerticalAlignment="Top"/>
-        <Button x:Name="TunerEE" Content="E"
+                Margin="0,88,0,0"
+                VerticalAlignment="Top"
+                Background="#604A38"
+                Foreground="White"
+                Grid.Column="2"
+                Click="Tuner4_OnClick"/>
+        <Button x:Name="Tuner6" Content="E"
                 FontSize="34"
                 Windows10version1809:CornerRadius="90,90,90,90"
                 Height="110"
                 Width="110"
-                Margin="1225,318,0,0"
-                VerticalAlignment="Top"/>
+                Margin="0,318,0,0"
+                VerticalAlignment="Top"
+                Background="#604A38"
+                Foreground="White"
+                Grid.Column="2"
+                Click="Tuner6_OnClick"/>
         <Button Content="Start Recording" 
                 FontSize="42"
                 VerticalAlignment="Top"
                 Click="Button_Click_1"
                 Margin="309,0,0,0" 
-                Grid.Row="1"/>
+                Grid.Row="1"
+                Background="#604A38"
+                Foreground="White"/>
         <Button Content="Stop Recording" 
                 FontSize="42"
                 VerticalAlignment="Top"
                 Click="OnStop"
-                Grid.Row="1"/>
+                Grid.Row="1"
+                Background="#604A38"
+                Foreground="White"/>
         <Button Content="Play Audio" 
                 FontSize="42"
                 Click="play_Audio_Click"
                 Margin="193,0,0,0" 
-                Grid.Row="1"/>
+                Grid.Row="1"
+                Background="#604A38"
+                Foreground="White"/>
         <Slider
             x:Name="slider1"
             Maximum="785"
@@ -93,6 +126,131 @@
             TickPlacement="BottomRight"
             Orientation="Vertical" Margin="1520,10,0,0"
             />
-        <Button Content="Return to menu" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="120" FontSize="55" Click="Button_Click"></Button>
+        <Button Content="Return to menu"
+                Grid.Row="2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Height="120"
+                FontSize="55"
+                Click="Button_Click"
+                Background="#604A38"
+                Foreground="White"
+                Grid.Column="2"></Button>
+        <ListBox Width="650"
+                 Grid.Column="2"
+                 HorizontalAlignment="Right"
+                 Background="Transparent">
+            <Button x:Name="StandardButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Standard - E,A,D,G,B,E" Click="StandardButton_Click"
+                    />
+            <Button x:Name="DropDButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Drop D - D,A,D,G,B,E"
+                    Click="DropDButton_OnClick"
+            />
+            <Button x:Name="DropCSharpButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Drop C# - C#,A,D,G,B,E"
+                    Click="DropCSharpButton_OnClick"
+            />
+            <Button x:Name="DropCButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Drop C - C,G,C,F,A,D"
+                    Click="DropCButton_OnClick"
+            />
+            <Button x:Name="DropBButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Drop B - B,G♭,B,E,A♭,D♭"
+                    Click="DropBButton_OnClick"
+            />
+            <Button x:Name="DropAButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Drop A - A,E,A,D,G♭,B"
+                    Click="DropAButton_OnClick"
+            />
+            <Button x:Name="DADGADButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="DADGAD - D,A,D,G,A,D"
+                    Click="DADGADButton_OnClick"
+            />
+            <Button x:Name="HalfStepDownButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Half Step Down - E♭,A♭,D♭,G♭,B♭,E♭"
+                    Click="HalfStepDownButton_OnClick"
+            />
+            <Button x:Name="FullStepDownButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Full Step Down - D,G,C,F,A,D"
+                    Click="FullStepDownButton_OnClick"
+            />
+            <Button x:Name="HalfStepUpButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Half Step Up - F,A#,D#,G#,C,F"
+                    Click="HalfStepUpButton_OnClick"
+            />
+            <Button x:Name="OpenCButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Open C - C,G,C,G,C,E"
+                    Click="OpenCButton_OnClick"
+            />
+            <Button x:Name="OpenDButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Open D - D,A,D,F#,A,D"
+                    Click="OpenDButton_OnClick"
+            />
+            <Button x:Name="OpenEButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Open E - E,B,E,G#,B,E"
+                    Click="OpenEButton_OnClick"
+            />
+            <Button x:Name="OpenFButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Open F - F,A,C,F,C,F"
+                    Click="OpenFButton_OnClick"
+            />
+            <Button x:Name="OpenGButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Open G - D,G,D,G,B,D"
+                    Click="OpenGButton_OnClick"
+            />
+            <Button x:Name="OpenAButton"
+                    HorizontalAlignment="Stretch"
+                    Height="70"
+                    FontSize="37"
+                    Content="Open A - E,A,E,A,C#,E"
+                    Click="OpenAButton_OnClick"
+            />
+        </ListBox>
     </Grid>
 </Page>
