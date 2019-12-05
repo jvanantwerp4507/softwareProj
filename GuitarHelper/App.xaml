@@ -4,4 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:GuitarHelper">
 
+    <Application.Resources>
+        <BitmapImage x:Key="GuitarImage" UriSource="pics/guitar.png"/>
+    </Application.Resources>
 </Application>

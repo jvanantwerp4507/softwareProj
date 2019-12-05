@@ -22,7 +22,7 @@
 
         <Rectangle Fill="#FFC596"
                    Grid.Row="0" Grid.Column="2"/>
-        
+
         <Rectangle Fill="#FFC596"
                    Grid.Row="0" Grid.Column="0"/>
 
@@ -32,17 +32,17 @@
                    Grid.Column="1"/>
 
         <Rectangle Grid.Row="1"
-                   Fill="Black"
+                   Fill="#604A38"
                  />
 
         <Rectangle Grid.Row="1"
                    Grid.Column="1"
-                   Fill="Black"
+                   Fill="#604A38"
                  />
-        
+
         <Rectangle Grid.Row="1"
                    Grid.Column="2"
-                   Fill="Black"
+                   Fill="#604A38"
                  />
 
 
@@ -57,7 +57,7 @@
                 HorizontalAlignment="Center"
                 FontSize="45"
                 Click="Tuner_Click"
-                Background="Red"
+                Background="#9F7B5E"
                 />
 
         <Button x:Name="Metronome"
@@ -69,7 +69,7 @@
                 FontSize="45" 
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
-                Background="Red" Click="Metronome_Click"/>
+                Background="#9F7B5E" Click="Metronome_Click"/>
 
 
 
@@ -82,7 +82,7 @@
                    VerticalAlignment="Top"
                    TextAlignment="Center"
                    />
-        
+
         <Image Height="400"
                Width="500"
                Grid.ColumnSpan="2"
@@ -95,12 +95,18 @@
                 Width="300"
                 Content="Library"
                 FontSize="45"
-                Background="Red" 
+                Background="#9F7B5E" 
                 Click="library_Click"               
                 Grid.Row="1"
                 Grid.Column="1"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"/>
 
+        <Image Source="pics/guitar.png"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Grid.ColumnSpan="3"
+               Height="600"
+               Width="800"/>
     </Grid>
 </Page>
